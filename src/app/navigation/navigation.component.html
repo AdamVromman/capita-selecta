@@ -1,0 +1,33 @@
+<mat-drawer-container class="navigation" [hasBackdrop]="false">
+  <mat-drawer class="navigation-sidenav" mode="side" opened>
+    <mat-nav-list>
+      <div *ngFor="let link of dataSource">
+        <mat-list-item
+          class="navigation-item"
+          [routerLink]="link.route"
+          routerLinkActive="active"
+        >
+          <h2>{{ link.title }}</h2>
+        </mat-list-item>
+        <div class="navigation-child" *ngFor="let child of link.children">
+          <mat-list-item
+            class="navigation-child"
+            [routerLink]="child.route"
+            routerLinkActive="active"
+          >
+            <span matListItemTitle>{{ child.title }}</span>
+          </mat-list-item>
+          <mat-list-item
+            class="navigation-grandChild"
+            *ngFor="let grandChild of child.children"
+            [routerLink]="child.route + '/' + grandChild.route"
+            routerLinkActive="active"
+          >
+            <span matListItemLine>{{ grandChild.title }}</span>
+          </mat-list-item>
+        </div>
+      </div>
+    </mat-nav-list>
+  </mat-drawer>
+  <mat-drawer-content><router-outlet></router-outlet></mat-drawer-content>
+</mat-drawer-container>
