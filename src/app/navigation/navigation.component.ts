@@ -71,7 +71,7 @@ const DATA: Chapter[] = [
         children: [
           {
             title: "Angular Material",
-            route: "angular-materials",
+            route: "angular-material",
             icon: "home",
           },
           {

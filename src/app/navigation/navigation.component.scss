@@ -9,13 +9,24 @@
 
     &-child {
         padding-left: 1rem;
+
+        &.active {
+            background-color: #eee;
+        }
     }
 
     &-grandChild {
-        padding-left: 2rem;
+
+        & .icon {
+            visibility: hidden;
+        }
+
+        &.active {
+            & .icon {
+                visibility: visible;
+            }
+        }
     }
 
-    & .active {
-        background-color: lightgrey;
-    }
+    
 }
