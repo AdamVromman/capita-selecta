@@ -1,6 +1,7 @@
 import { NestedTreeControl } from '@angular/cdk/tree';
 import { Component } from '@angular/core';
 import { MatTreeNestedDataSource } from '@angular/material/tree';
+import { Router } from '@angular/router';
 
 interface Chapter {
   title: string,
@@ -95,8 +96,22 @@ const DATA: Chapter[] = [
 export class NavigationComponent {
   dataSource: Chapter[];
 
-  constructor() {
+  constructor(private router: Router) {
     this.dataSource = DATA;
+  }
+
+  calculateProgress = () => {
+    if (this.router.url === "/")
+    {
+      return 0;
+    }
+    let listOfRoutes = this.router.config.slice(1);
+    let currentRoute = listOfRoutes.findIndex((route) => this.router.url === '/' + route.path)
+    if (currentRoute !== -1)
+    {
+      return (currentRoute + 1) / (listOfRoutes.length === 0? 1 : listOfRoutes.length) * 100;
+    }
+    return 0;
   }
 
   hasChild = (_: number, node: Chapter) => !!node.children && node.children.length > 0;
