@@ -28,5 +28,11 @@
         }
     }
 
+    .content-wrapper {
+        max-width: 100%;
+        height: calc(100% - 4px);
+        overflow: hidden;
+    }
+
     
 }

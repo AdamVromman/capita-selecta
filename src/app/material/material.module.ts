@@ -4,7 +4,8 @@ import { MatSidenavModule} from '@angular/material/sidenav';
 import {MatListModule} from '@angular/material/list';
 import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
-import {MatProgressBarModule} from '@angular/material/progress-bar'
+import {MatProgressBarModule} from '@angular/material/progress-bar';
+import {MatChipsModule} from '@angular/material/chips'
 
 
 const listOfComponents = [
@@ -12,7 +13,8 @@ const listOfComponents = [
   MatListModule,
   MatIconModule,
   MatButtonModule,
-  MatProgressBarModule
+  MatProgressBarModule,
+  MatChipsModule
 ]
 
 @NgModule({
