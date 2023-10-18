@@ -1,13 +1,14 @@
 import { NestedTreeControl } from '@angular/cdk/tree';
 import { Component } from '@angular/core';
 import { MatTreeNestedDataSource } from '@angular/material/tree';
-import { Router } from '@angular/router';
+import { ChildrenOutletContexts, Router } from '@angular/router';
+import { slideInAnimation } from '../animations';
 
 interface Chapter {
   title: string,
   route: string,
   icon: string,
-  children?: Chapter[]
+  children?: Chapter[],
 }
 
 const DATA: Chapter[] = [
@@ -94,12 +95,15 @@ const DATA: Chapter[] = [
 @Component({
   selector: 'app-navigation',
   templateUrl: './navigation.component.html',
-  styleUrls: ['./navigation.component.scss']
+  styleUrls: ['./navigation.component.scss'],
+  animations: [
+    slideInAnimation
+  ],
 })
 export class NavigationComponent {
   dataSource: Chapter[];
 
-  constructor(private router: Router) {
+  constructor(private router: Router, private contexts: ChildrenOutletContexts) {
     this.dataSource = DATA;
   }
 
@@ -115,6 +119,10 @@ export class NavigationComponent {
       return (currentRoute + 1) / (listOfRoutes.length === 0? 1 : listOfRoutes.length) * 100;
     }
     return 0;
+  }
+
+  getRouteAnimationData() {
+    return this.contexts.getContext('primary')?.route?.snapshot?.data?.['animation'];
   }
 
   hasChild = (_: number, node: Chapter) => !!node.children && node.children.length > 0;

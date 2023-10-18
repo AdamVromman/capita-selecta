@@ -49,7 +49,7 @@ import { SourcesComponent } from './sources/sources.component';
     HistoryItemNametagComponent,
     LifecycleLoggerComponent,
     MiscComponent,
-    SourcesComponent
+    SourcesComponent,
   ],
   imports: [
     BrowserModule,

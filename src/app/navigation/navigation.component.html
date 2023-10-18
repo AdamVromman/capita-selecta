@@ -10,11 +10,7 @@
           <h2>{{ link.title }}</h2>
         </mat-list-item>
         <div class="navigation-child" *ngFor="let child of link.children">
-          <mat-list-item
-            class="navigation-child"
-            [routerLink]="child.route"
-            routerLinkActive="active"
-          >
+          <mat-list-item class="navigation-child">
             <span matListItemTitle>{{ child.title }}</span>
           </mat-list-item>
 
@@ -42,7 +38,7 @@
       mode="determinate"
       [value]="calculateProgress()"
     ></mat-progress-bar>
-    <div class="content-wrapper">
+    <div class="content-wrapper" [@routeAnimations]="getRouteAnimationData()">
       <router-outlet></router-outlet>
     </div>
   </mat-drawer-content>
