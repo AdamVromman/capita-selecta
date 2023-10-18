@@ -22,6 +22,7 @@ import { AngularAnimationsComponent } from './angular-animations/angular-animati
 import { HistoryItemComponent } from './history-item/history-item.component';
 import { HistoryItemCardComponent } from './history-item-card/history-item-card.component';
 import { HistoryItemNametagComponent } from './history-item-nametag/history-item-nametag.component';
+import {FormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -48,7 +49,8 @@ import { HistoryItemNametagComponent } from './history-item-nametag/history-item
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MaterialModule
+    MaterialModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

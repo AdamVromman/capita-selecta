@@ -11,6 +11,8 @@ import {MatCardModule} from '@angular/material/card';
 import {MatNativeDateModule} from '@angular/material/core';
 import {MatInputModule} from '@angular/material/input';
 import {CdkDrag,CdkDragHandle} from '@angular/cdk/drag-drop';
+import {MatSlideToggleModule} from '@angular/material/slide-toggle';
+import { MatDividerModule } from '@angular/material/divider';
 
 
 
@@ -27,7 +29,9 @@ const listOfComponents = [
   MatNativeDateModule,
   MatInputModule,
   CdkDrag,
-  CdkDragHandle
+  CdkDragHandle,
+  MatSlideToggleModule,
+  MatDividerModule
 ]
 
 @NgModule({
