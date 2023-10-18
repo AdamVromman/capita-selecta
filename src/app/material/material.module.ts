@@ -13,6 +13,7 @@ import {MatInputModule} from '@angular/material/input';
 import {CdkDrag,CdkDragHandle} from '@angular/cdk/drag-drop';
 import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 import { MatDividerModule } from '@angular/material/divider';
+import {MatTableModule} from '@angular/material/table';
 
 
 
@@ -31,7 +32,8 @@ const listOfComponents = [
   CdkDrag,
   CdkDragHandle,
   MatSlideToggleModule,
-  MatDividerModule
+  MatDividerModule,
+  MatTableModule
 ]
 
 @NgModule({

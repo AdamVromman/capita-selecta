@@ -1,1 +1,34 @@
-<p>components works!</p>
+<div class="container">
+  <table
+    mat-table
+    [dataSource]="dataSource"
+    class="mat-elevation-z8 component-table"
+  >
+    <ng-container matColumnDef="component">
+      <th mat-header-cell *matHeaderCellDef>Component part</th>
+      <td mat-cell *matCellDef="let element">{{ element.name }}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="function">
+      <th mat-header-cell *matHeaderCellDef>Function</th>
+      <td mat-cell *matCellDef="let element">{{ element.function }}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="otherFile">
+      <th mat-header-cell *matHeaderCellDef>Can be used in another file</th>
+      <td mat-cell *matCellDef="let element">
+        <mat-slide-toggle [checked]="element.otherFile"></mat-slide-toggle>
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="optional">
+      <th mat-header-cell *matHeaderCellDef>Is optional</th>
+      <td mat-cell *matCellDef="let element">
+        <mat-slide-toggle [checked]="element.optional"></mat-slide-toggle>
+      </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+  </table>
+</div>
