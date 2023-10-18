@@ -53,16 +53,6 @@ const DATA: Chapter[] = [
             route: "lifecycle",
             icon: "home",
           },
-          {
-            title: "Directives",
-            route: "directives",
-            icon: "home",
-          },
-          {
-            title: "Dependency injection",
-            route: "dependency-injection",
-            icon: "home",
-          }
         ]
       },
       {
@@ -82,7 +72,20 @@ const DATA: Chapter[] = [
           },
 
         ]
+      },
+      {
+        title: "Misc",
+        route: "misc",
+        icon: "home",
+        children: [
+          {
+            title: "Sources",
+            route: "sources",
+            icon: "home"
+          }
+        ]
       }
+     
     ]
   }
 ]

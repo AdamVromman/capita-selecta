@@ -13,6 +13,8 @@ import { DependencyInjectionComponent } from './dependency-injection/dependency-
 import { AngularAnimationsComponent } from './angular-animations/angular-animations.component';
 import { AngularMaterialComponent } from './angular-material/angular-material.component';
 import { LibrariesComponent } from './libraries/libraries.component';
+import { MiscComponent } from './misc/misc.component';
+import { SourcesComponent } from './sources/sources.component';
 
 const routes: Routes = [
   {path: '', component: CapitaSelectaComponent},
@@ -23,11 +25,11 @@ const routes: Routes = [
   {path: 'overview', component: OverviewComponent},
   {path: 'overview/components', component: ComponentsComponent},
   {path: 'overview/lifecycle', component: LifecycleComponent},
-  {path: 'overview/directives', component: DirectivesComponent},
-  {path: 'overview/dependency-injection', component: DependencyInjectionComponent},
   {path: 'libraries', component: LibrariesComponent},
   {path: 'libraries/angular-material', component: AngularMaterialComponent},
   {path: 'libraries/angular-animations', component: AngularAnimationsComponent},
+  {path: 'misc', component: MiscComponent},
+  {path: 'misc/sources', component: SourcesComponent},
 ];
 
 @NgModule({
