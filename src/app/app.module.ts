@@ -19,6 +19,9 @@ import { DependencyInjectionComponent } from './dependency-injection/dependency-
 import { LibrariesComponent } from './libraries/libraries.component';
 import { AngularMaterialComponent } from './angular-material/angular-material.component';
 import { AngularAnimationsComponent } from './angular-animations/angular-animations.component';
+import { HistoryItemComponent } from './history-item/history-item.component';
+import { HistoryItemCardComponent } from './history-item-card/history-item-card.component';
+import { HistoryItemNametagComponent } from './history-item-nametag/history-item-nametag.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +39,10 @@ import { AngularAnimationsComponent } from './angular-animations/angular-animati
     DependencyInjectionComponent,
     LibrariesComponent,
     AngularMaterialComponent,
-    AngularAnimationsComponent
+    AngularAnimationsComponent,
+    HistoryItemComponent,
+    HistoryItemCardComponent,
+    HistoryItemNametagComponent
   ],
   imports: [
     BrowserModule,

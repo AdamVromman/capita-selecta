@@ -1,1 +1,94 @@
-<p>history works!</p>
+<div class="container">
+  <app-history-item>
+    <app-history-item-card [startPositionX]="25" [startPositionY]="43">
+      <mat-form-field>
+        <input matInput [matDatepicker]="value1" [value]="date1" />
+        <mat-datepicker-toggle
+          matIconSuffix
+          [for]="value1"
+        ></mat-datepicker-toggle>
+        <mat-datepicker #value1 startView="multi-year"> </mat-datepicker>
+      </mat-form-field>
+    </app-history-item-card>
+    <app-history-item-card [startPositionX]="55" [startPositionY]="40">
+      <app-history-item-nametag
+        class="avatar"
+        url="/assets/misko-hevery.jpeg"
+        title="Miško Hevery"
+        subTitle="Working at Google"
+      ></app-history-item-nametag>
+    </app-history-item-card>
+    <app-history-item-card [startPositionX]="55" [startPositionY]="60">
+      <app-history-item-nametag
+        url="/assets/adam-abrons.jpeg"
+        title="Adam Abrons"
+        subTitle="Helping Hevery out with Angular"
+      ></app-history-item-nametag>
+    </app-history-item-card>
+  </app-history-item>
+  <app-history-item>
+    <app-history-item-card [startPositionX]="60" [startPositionY]="10">
+      <mat-form-field>
+        <input matInput [matDatepicker]="value2" [value]="date2" />
+        <mat-datepicker-toggle
+          matIconSuffix
+          [for]="value2"
+        ></mat-datepicker-toggle>
+        <mat-datepicker #value2 startView="multi-year"> </mat-datepicker>
+      </mat-form-field>
+    </app-history-item-card>
+    <app-history-item-card [startPositionX]="2" [startPositionY]="10">
+      <img src="/assets/angular-1.png" class="angular-image" />
+    </app-history-item-card>
+    <app-history-item-card [startPositionX]="60" [startPositionY]="30">
+      <app-history-item-nametag
+        url="/assets/igor-minar.jpeg"
+        title="Igor Minár"
+        subTitle="Colleague at Google"
+      ></app-history-item-nametag>
+    </app-history-item-card>
+    <app-history-item-card [startPositionX]="60" [startPositionY]="50">
+      <app-history-item-nametag
+        url="/assets/vojta-jina.jpeg"
+        title="Vojta Jína"
+        subTitle="Colleague at Google"
+      ></app-history-item-nametag>
+    </app-history-item-card>
+  </app-history-item>
+  <app-history-item>
+    <app-history-item-card [startPositionX]="20" [startPositionY]="43">
+      <mat-form-field>
+        <input matInput [matDatepicker]="value3" [value]="date3" />
+        <mat-datepicker-toggle
+          matIconSuffix
+          [for]="value3"
+        ></mat-datepicker-toggle>
+        <mat-datepicker #value3 startView="multi-year"> </mat-datepicker>
+      </mat-form-field>
+    </app-history-item-card>
+    <app-history-item-card [startPositionX]="55" [startPositionY]="40">
+      <img src="/assets/google-logo.png" class="google-image" />
+    </app-history-item-card>
+  </app-history-item>
+  <app-history-item>
+    <app-history-item-card [startPositionX]="60" [startPositionY]="43">
+      <mat-form-field>
+        <input matInput [matDatepicker]="value4" [value]="date4" />
+        <mat-datepicker-toggle
+          matIconSuffix
+          [for]="value4"
+        ></mat-datepicker-toggle>
+        <mat-datepicker #value4 startView="multi-year"> </mat-datepicker>
+      </mat-form-field>
+    </app-history-item-card>
+    <app-history-item-card [startPositionX]="70" [startPositionY]="60">
+      <img src="/assets/angular-logo-2.png" class="angular-logo" />
+    </app-history-item-card>
+    <app-history-item-card [startPositionX]="20" [startPositionY]="43">
+      <h2 class="title">2.0</h2>
+    </app-history-item-card>
+  </app-history-item>
+  <div class="arrow-container">
+    <div class="arrow"></div>
+  </div>
+</div>

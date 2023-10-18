@@ -1,0 +1,11 @@
+<div
+  [style.left]="startPositionX + '%'"
+  [style.top]="startPositionY + '%'"
+  cdkDrag
+  class="content-container"
+>
+  <div class="handler" cdkDragHandle>
+    <mat-icon class="icon" matListItemIcon>open_with</mat-icon>
+  </div>
+  <ng-content></ng-content>
+</div>
