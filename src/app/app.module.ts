@@ -23,6 +23,7 @@ import { HistoryItemComponent } from './history-item/history-item.component';
 import { HistoryItemCardComponent } from './history-item-card/history-item-card.component';
 import { HistoryItemNametagComponent } from './history-item-nametag/history-item-nametag.component';
 import {FormsModule} from '@angular/forms';
+import { LifecycleLoggerComponent } from './lifecycle-logger/lifecycle-logger.component';
 
 @NgModule({
   declarations: [
@@ -43,7 +44,8 @@ import {FormsModule} from '@angular/forms';
     AngularAnimationsComponent,
     HistoryItemComponent,
     HistoryItemCardComponent,
-    HistoryItemNametagComponent
+    HistoryItemNametagComponent,
+    LifecycleLoggerComponent
   ],
   imports: [
     BrowserModule,
