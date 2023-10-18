@@ -5,8 +5,15 @@
   </mat-slide-toggle>
   <mat-divider></mat-divider>
   <mat-list role="list">
-    <mat-list-item role="listitem">Item 1</mat-list-item>
-    <mat-list-item role="listitem">Item 2</mat-list-item>
-    <mat-list-item role="listitem">Item 3</mat-list-item>
+    <div *ngIf="!isChecked; else list2">
+      <mat-list-item *ngFor="let item of angular1List" role="listitem">{{
+        item
+      }}</mat-list-item>
+    </div>
+    <ng-template #list2>
+      <mat-list-item *ngFor="let item of angular2List" role="listitem"
+        ><span color="accent">{{ item }}</span></mat-list-item
+      ></ng-template
+    >
   </mat-list>
 </div>
